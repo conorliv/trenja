@@ -1,0 +1,11 @@
+%h1{ class: 'text-center' } Trenja :トレンジャ: Trending Kanji
+
+%table{ class: 'table table-bordered table-striped' }
+  %th
+    %tr
+      %th Kanji
+      %th Count
+  - @kanji.each do |kanji|
+    %tr
+      %td= kanji.kanji
+      %td= kanji.count
