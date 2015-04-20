@@ -1,20 +1,13 @@
 # Represents a potential source for finding new content that contains kanji.
-class Source
+class Source < ActiveRecord::Base
   class << self
-    def process_tweets(tweets)
-      #Extracts other screen_names to search by
-      usernames = []
-      tweets.each { |tweet| usernames << tweet.scan(/@[a-zA-Z0-9_]+/) }
-      usernames.flatten!
-      usernames.uniq!
-
-      #strips off trailing white space and leading "@" from username
-      usernames.each do |username|
-        username.gsub!("@", "")
-        username.rstrip!
+    def process_sources(sources)
+      new_source_data = []
+      sources.each do |source|
+        new_source_data << Source.new(name: source, value_index: 5, source_type: 'twitter')
       end
 
-      # Eventually I'll want to persist the usernames
+      Source.import(new_source_data)
     end
   end
 end
