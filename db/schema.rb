@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150410021320) do
+ActiveRecord::Schema.define(version: 20150413015645) do
 
   create_table "kanjis", force: true do |t|
     t.string   "kanji"
@@ -19,5 +19,15 @@ ActiveRecord::Schema.define(version: 20150410021320) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "sources", force: true do |t|
+    t.string   "name"
+    t.integer  "value_index"
+    t.string   "source_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sources", ["name"], name: "index_sources_on_name", unique: true
 
 end

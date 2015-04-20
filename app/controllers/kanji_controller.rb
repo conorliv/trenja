@@ -7,7 +7,12 @@ class KanjiController < ApplicationController
     tweets = TwitterAPIClient.get_tweets('urawillow')
     puts tweets
     Kanji.process_tweets(tweets)
-    # Source.process_tweets(tweets)
+  end
+
+  def update_sources
+    sources = TwitterAPIClient.get_friends('urawillow')
+    puts sources
+    Source.process_sources(sources)
   end
 
   #def write(counts, sentences)
