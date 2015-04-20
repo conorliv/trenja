@@ -13,3 +13,7 @@ gem 'spring',        group: :development
 gem 'activerecord-import'
 gem 'oauth'
 gem 'haml'
+
+group :development, :test do
+  gem 'pry-byebug'
+end
