@@ -4,15 +4,25 @@ class KanjiController < ApplicationController
   end
 
   def update_counts
-    tweets = TwitterAPIClient.get_tweets('urawillow')
-    puts tweets
-    Kanji.process_tweets(tweets)
+    source = get_random_source
+    tweets = TwitterAPIClient.get_tweets(source)
+    percentage_kanji = Kanji.process_tweets(tweets)
+
+    if percentage_kanji < 10
+      source.value_index -= 1
+      source.save
+    end
   end
 
   def update_sources
-    sources = TwitterAPIClient.get_friends('urawillow')
-    puts sources
+    sources = TwitterAPIClient.get_friends(get_random_source.name)
     Source.process_sources(sources)
+  end
+
+  private
+
+  def get_random_source
+    Source.find_by_id(Source.count)
   end
 
   #def write(counts, sentences)
