@@ -16,6 +16,6 @@ being used the most by real Japanese people in real time. Knowing this
 information can help kanji learners by showing them which kanji, out
 of the ~6,000 that are out there, they should study first.
 
-The underlying assumption is that one should study the kanji that are used
+One underlying assumption is that one should study the kanji that are used
 most often by real live Japanese people because those are the kanji
 one will see the most often.
