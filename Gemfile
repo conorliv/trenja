@@ -15,6 +15,6 @@ gem 'oauth'
 gem 'haml'
 
 group :development, :test do
-  gem 'pry-byebug'
+  gem 'pry-byebug', '~> 3.0'
   gem 'rspec-rails', '~> 3.0'
 end
