@@ -19,3 +19,15 @@ of the ~6,000 that are out there, they should study first.
 One underlying assumption is that one should study the kanji that are used
 most often by real live Japanese people because those are the kanji
 one will see the most often.
+
+
+Definition of Domain Objects
+
+Kanji
+A kanji character, stored together with its count. I.e. the
+number of times it has been detected.
+
+Source
+A potential source for more kanji data. For example, it could
+be a Twitter account that tends to generate tweets that contain
+kanji.
