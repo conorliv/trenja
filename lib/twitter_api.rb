@@ -1,4 +1,5 @@
-class Twitter
+class TwitterApi
+  include Singleton
   attr_reader :client
 
   def initialize
