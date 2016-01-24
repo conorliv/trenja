@@ -15,6 +15,8 @@ gem 'haml'
 gem 'twitter', '~> 5.15.0'
 gem 'dotenv-rails'
 gem 'pg', '~> 0.18.0'
+gem 'delayed_job_active_record'
+gem 'clockwork'
 
 group :development, :test do
   gem 'pry-byebug', '~> 3.0'
