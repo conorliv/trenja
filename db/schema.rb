@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150413015645) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "kanjis", force: true do |t|
     t.string   "kanji"
     t.integer  "count"
@@ -28,6 +31,6 @@ ActiveRecord::Schema.define(version: 20150413015645) do
     t.datetime "updated_at"
   end
 
-  add_index "sources", ["name"], name: "index_sources_on_name", unique: true
+  add_index "sources", ["name"], name: "index_sources_on_name", unique: true, using: :btree
 
 end
