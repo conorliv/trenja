@@ -5,7 +5,7 @@ class KanjiController < ApplicationController
   end
 
   def update_counts
-    tweets = Twitter.new.client.user_timeline(random_source)
+    tweets = client.user_timeline(random_source)
     percentage_kanji = TweetProcessor.process(tweets)
 
     if percentage_kanji < 10
@@ -15,7 +15,7 @@ class KanjiController < ApplicationController
   end
 
   def update_sources
-    sources = Twitter.new.client.friends(random_source.name)
+    sources = client.friends(random_source.name)
     KanjiSourceImporter.import(sources)
   end
 
@@ -23,5 +23,9 @@ class KanjiController < ApplicationController
 
   def random_source
     Source.find_by_id(rand(0..Source.count))
+  end
+
+  def client
+    @client ||= TwitterApi.client
   end
 end
