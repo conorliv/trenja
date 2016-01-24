@@ -13,6 +13,8 @@ gem 'spring', group: :development
 gem 'activerecord-import'
 gem 'oauth'
 gem 'haml'
+gem 'twitter', '~> 5.15.0'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'pry-byebug', '~> 3.0'

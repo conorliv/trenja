@@ -2,7 +2,7 @@ class TweetProcessor
   class << self
     # Tweets should be an array of strings where the strings are tweets.
     # Return the percentage of characters that were kanji.
-    def process_tweets(tweets)
+    def process(tweets)
       character_count = 0
       kanji_count = 0
 
