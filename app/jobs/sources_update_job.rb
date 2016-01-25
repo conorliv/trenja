@@ -1,7 +1,7 @@
 class UpdateSourcesJob
   def perform
     sources = client.friends(random_source.name)
-    KanjiSourceImporter.import(sources)
+    SourceImportService.import(sources)
   end
 
   private

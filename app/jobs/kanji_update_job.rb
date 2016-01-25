@@ -1,12 +1,7 @@
-class UpdateKanjiJob
+class KanjiUpdateJob
   def perform
     tweets = client.user_timeline(random_source)
-    percentage_kanji = TweetProcessor.process(tweets)
-
-    if percentage_kanji < 10
-      source.value_index -= 1
-      source.save
-    end
+    TweetImportService.process(tweets)
   end
 
   private
