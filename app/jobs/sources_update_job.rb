@@ -1,16 +1,7 @@
 class UpdateSourcesJob
   def perform
-    sources = client.friends(random_source.name)
+    random_source = RandomSourceRetrievalService.random_source
+    sources = TwitterApi.client.friends(random_source.name)
     SourceImportService.import(sources)
-  end
-
-  private
-
-  def random_source
-    Source.find_by_id(rand(0..Source.count))
-  end
-
-  def client
-    @client ||= TwitterApi.client
   end
 end
