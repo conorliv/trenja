@@ -8,7 +8,7 @@ module Clockwork
     puts "Running #{job} at #{time}"
   end
 
-  every(1.day, 'update.kanji') { Delayed::Job.enqueue UpdateKanjiJob.new }
-  every(1.day, 'update.sources') { Delayed::Job.enqueue UpdateSourcesJob.new }
+  every(2.hours, 'update.kanji') { Delayed::Job.enqueue KanjiUpdateJob.new }
+  every(2.hours, 'update.sources') { Delayed::Job.enqueue SourcesUpdateJob.new }
 
 end
