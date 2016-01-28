@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root 'home#show'
+  get 'about', to: 'home#about'
+
   resources :kanji, only: :index
 
   namespace :api do
