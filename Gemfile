@@ -17,8 +17,11 @@ gem 'dotenv-rails'
 gem 'pg', '~> 0.18.0'
 gem 'delayed_job_active_record'
 gem 'clockwork'
+gem 'responders', '~> 2.0'
 
 group :development, :test do
   gem 'pry-byebug', '~> 3.0'
   gem 'rspec-rails', '~> 3.0'
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'database_cleaner', '~> 1.4'
 end

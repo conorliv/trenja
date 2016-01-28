@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   root 'home#show'
   resources :kanji, only: :index
-  get 'update_counts', to: 'kanji#update_counts'
-  get 'update_sources', to: 'kanji#update_sources'
+
+  namespace :api do
+    namespace :v1 do
+      resources :kanji, only: :index
+    end
+  end
 end
