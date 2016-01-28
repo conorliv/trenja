@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      get 'trending', to: 'kanji#trending'
+      resources :kanji, only: :index
     end
   end
 end
