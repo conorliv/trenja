@@ -31,5 +31,5 @@ of keeping on top of things.
 * Mention @conorliv in your pull request and provide a brief summary of changes.
 
 
-A big thanks to puppetlab's (CONTRIBUTING.md)[https://github.com/puppetlabs/puppet/blob/master/CONTRIBUTING.md]
+A big thanks to puppetlab's [CONTRIBUTING.md](https://github.com/puppetlabs/puppet/blob/master/CONTRIBUTING.md)
 file, which served as a model for me in writing these contribution guidelines.
