@@ -30,3 +30,7 @@ en:
     api: "開発者のAPI"
     project_title: "トレンジャ - 傾向漢字"
     created_by: "考案者はコナー・リビングストン"
+  kanji:
+    kanji_frequency_label: "漢字の頻度"
+    kanji_label: "漢字"
+    count_label: "回数"

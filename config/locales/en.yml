@@ -30,3 +30,7 @@ en:
     api: "Developer API"
     project_title: "Trenja - Trending Kanji"
     created_by: "Created by Conor Livingston"
+  kanji:
+    kanji_frequency_label: "Kanji Frequency"
+    kanji_label: "Kanji"
+    count_label: "Count"
