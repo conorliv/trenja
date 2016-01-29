@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Trenja</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Trenja</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Realtime Kanji Analytics">
+    <meta name="author" content="Conor Livingston">
+  </head>
 
-<%= yield %>
+  <body>
+    <div class="container top-buffer">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="/">Home</a></li>
+            <li role="presentation"><a href="/about">About</a></li>
+            <li role="presentation"><a href="/reference">API</a></li>
+          </ul>
+        </nav>
+        <h3 class="text-muted">Trenja - Trending Kanji</h3>
+      </div>
 
+      <%= yield %>
 
-<footer>
-    <div class="container text-center">
-        <p>Trenja  2015</p>
+      <footer>
+        <div class="footer text-center">
+          <p>Created by Conor Livingston</p>
+        </div>
+      </footer>
     </div>
-</footer>
-</body>
+  </body>
+
 </html>
