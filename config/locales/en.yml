@@ -1,23 +1,36 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  home:
+    header: "Realtime Kanji Analytics"
+    summary: "This project aims to provide quick insights into which kanji are most commonly used by real Japanese people in real time."
+    view_button: "View trending kanji now"
+  about:
+    what_are_kanji_label: "What are Kanji?"
+    what_are_kanji_content: "Kanji are Japanese characters."
+    lots_of_kanji_label: "Lots of Kanji"
+    lots_of_kanji_content: "Well over 6,000 of these characters are in use today. The Japanese government provides a list of the most frequently used kanji out of those ~6,000. In 2010, there were 2,136 kanji on this list."
+    too_many_kanji_label: "Too Many Kanji"
+    too_many_kanji_content: "Kanji is a big obstacle for people who are trying to learn Japanese.  While 2,136 is much less intimidating than 6,000, learning 2,136 characters is still a massive undertaking."
+    trenjas_role_label: "Trenja's Role"
+    trenjas_role_content: "Trenja attempts to help people who are trying to learn kanji by using data mining strategies to determine which kanji are being used the most by real Japanese people in real time. Knowing this information can help kanji learners by showing them which kanji, out of the ~6,000 that are out there, they should study first."
+    learning_strategy_label: "Learning Strategy"
+    learning_strategy_content: "The underlying assumption is that one should study the kanji that are used most often by real live japanese people because those are the kanji one will see the most often. This will help kanji learners to become as literate as possible as quickly as possible."
+    contributing_label: "Contributing"
+    contributing_content_html: "This project is completely open source, and I would love for you to contribute. <a href=\"https://github.com/conorliv/trenja\">Here</a> is a link to the project code, hosted on Github. See contribution guidelines on Github for more information."
+  api:
+    header: "API Documentation"
+    get_trending_kanji:
+      title: "Trending Kanji"
+      endpoint_label: "Endpoint"
+      http_verb_label: "HTTP Verb"
+      description_label: "Description"
+      description_content: "Returns top 10 trending kanji."
+  layout:
+    home: "Home"
+    about: "About"
+    api: "Developer API"
+    project_title: "Trenja - Trending Kanji"
+    created_by: "Created by Conor Livingston"
+  kanji:
+    kanji_frequency_label: "Kanji Frequency"
+    kanji_label: "Kanji"
+    count_label: "Count"

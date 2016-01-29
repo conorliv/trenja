@@ -1,0 +1,17 @@
+<h1 class="text-center"><%= t('kanji.kanji_frequency_label') %></h1>
+
+<table class="table table-borded table-striped">
+  <th>
+    <tr>
+      <th><%= t('kanji.kanji_label') %></th>
+      <th><%= t('kanji.count_label') %></th>
+    </tr>
+  </th>
+
+  <% @kanji.each do |kanji| %>
+    <tr>
+      <td><%= kanji.kanji %></td>
+      <td><%= kanji.count %></td>
+    </tr>
+  <% end %>
+</table>

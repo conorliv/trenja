@@ -16,19 +16,19 @@
       <div class="header clearfix">
         <nav>
           <ul class="nav nav-pills pull-right">
-            <li role="presentation"><a href="/">Home</a></li>
-            <li role="presentation"><a href="/about">About</a></li>
-            <li role="presentation"><a href="/reference">API</a></li>
+            <li role="presentation"><a href="/"><%= t('layout.home') %></a></li>
+            <li role="presentation"><a href="/about"><%= t('layout.about') %></a></li>
+            <li role="presentation"><a href="/reference"><%= t('layout.api') %></a></li>
           </ul>
         </nav>
-        <h3 class="text-muted">Trenja - Trending Kanji</h3>
+        <h3 class="text-muted"><%= t('layout.project_title') %></h3>
       </div>
 
       <%= yield %>
 
       <footer>
         <div class="footer text-center">
-          <p>Created by Conor Livingston</p>
+          <p><%= t('layout.created_by') %></p>
         </div>
       </footer>
     </div>
