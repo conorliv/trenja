@@ -11,3 +11,4 @@ module Clockwork
   every(2.hours, 'update.kanji') { Delayed::Job.enqueue KanjiUpdateJob.new }
   every(2.hours, 'update.sources') { Delayed::Job.enqueue SourcesUpdateJob.new }
 end
+
