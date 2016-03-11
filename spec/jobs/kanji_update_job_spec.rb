@@ -6,9 +6,4 @@ describe KanjiUpdateJob do
   describe '#perform' do
     it 'imports kanji into database' do
       FactoryGirl.create(:source)
-      VCR.use_cassette('user_timeline_retrieval') do
-        kanji_update_job.perform
-      end
-    end
-  end
-end
+      VCR.use_cas
